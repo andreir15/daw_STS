@@ -1,12 +1,10 @@
 package pruebaSpring.entities;
 
-public class Guitarra implements InstrumentoMusical{
+public class Guitarra{
 public void rasgar() {
 	System.out.println("TRIANGGGG");
 }
 
-public void tocar() {
-	this.rasgar();	
-}
+
 
 }

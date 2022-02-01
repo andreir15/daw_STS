@@ -1,20 +1,16 @@
 package pruebaSpring.entities;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 public class Musico {
-	/*
-   private Trompeta trompeta;
-	
-   public Musico() {
-		this.trompeta=new Trompeta();
-	}
-   public void tocar() {
-	
-	this.trompeta.calentar();
-	this.trompeta.sonar();
-  }*/
 	private InstrumentoMusical instrumento;
 	public Musico() {
-	this.instrumento=new Trompeta();
+		InstrumentoMusicalFactory imf=InstrumentoMusicalFactory.getImf();
+		this.instrumento=imf.getInstrumento();
+
 	}
 	public void tocar() {
 		this.instrumento.tocar();
